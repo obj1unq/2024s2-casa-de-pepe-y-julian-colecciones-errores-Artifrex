@@ -16,7 +16,7 @@ object casaDePepeYJulian {
 	}
 
 	method vieneDeComprar(categoria) {
-		return self.ultimaCosaComprada().categoria() == categoria
+		return not cosas.isEmpty() && self.ultimaCosaComprada().categoria() == categoria
 	}
 
 	method ultimaCosaComprada() {
@@ -37,6 +37,7 @@ object casaDePepeYJulian {
 
 	method comprados(categoria) {
 		return cosas.filter({cosa => cosa.categoria() == categoria })
+		//return cosas.filter({cosa => cosa.categoria().esComestible() })
 	}
 
 	method malaEpoca() {

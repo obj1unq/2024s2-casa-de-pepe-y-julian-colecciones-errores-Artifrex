@@ -1,0 +1,15 @@
+import casa.*
+import cosas.*
+
+describe "ejemplo 1" {
+    test "comprar heladera, cama, plancha" {
+        casaDePepeYJulian.comprar(heladera)
+        casaDePepeYJulian.comprar(cama)
+        casaDePepeYJulian.comprar(plancha)
+        assert.equals([heladera, cama, plancha], casaDePepeYJulian.cosas())
+        assert.equals(3, casaDePepeYJulian.cantidadDeCosasCompradas())
+        assert.that(casaDePepeYJulian.tieneAlgun(electrodomestico))
+        assert.that(casaDePepeYJulian.tieneAlgun(mueble))
+        assert.notThat(casaDePepeYJulian.tieneAlgun(comida))
+    }
+}
