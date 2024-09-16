@@ -19,8 +19,13 @@ object cama {
 }
 
 object tiraDeAsado {
-	method precio() { return 350 }
-	method categoria() { return comida }
+	method precio() { 
+		return 350 
+	}
+
+	method categoria() { 
+		return comida
+	}
 }
 
 object paqueteDeFideos {
